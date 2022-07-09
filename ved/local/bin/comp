@@ -1,0 +1,2 @@
+#!/bin/sh
+g++ -fsanitize=address -std=c++17 -Wall -Wextra -Wshadow -DONPC -O2 $1 -o ${1%%.*}

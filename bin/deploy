@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkdir .dotfiles
+mv -v LinuxDotfiles .dotfiles/
+cd .dotfiles/LinuxDotfiles/ved
+for file in *
+do
+  echo $file
+  mv -v $file ../../../.$file
+done
