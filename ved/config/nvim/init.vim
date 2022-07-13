@@ -68,7 +68,7 @@ highlight PreProc          guifg=#ff5a92 ctermfg=5    guibg=none    ctermbg=none
 highlight String           guifg=#51afef ctermfg=12   guibg=none    ctermbg=none  cterm=none
 highlight Number           guifg=#ff9800 ctermfg=1    guibg=none    ctermbg=none  cterm=none
 highlight Function         guifg=#ff9800 ctermfg=1    guibg=none    ctermbg=none  cterm=none
-highlight Visual           guifg=#eceff1 ctermfg=none guibg=#263238 ctermbg=8     cterm=none
+highlight Visual           guifg=#eceff1 ctermfg=none guibg=#263238 ctermbg=0     cterm=none
 
 syntax enable
 filetype on
