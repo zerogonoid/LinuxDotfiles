@@ -32,17 +32,15 @@ void solve() {
 int32_t main() {
   ios::sync_with_stdio(false); cin.tie(nullptr);
   int TT = 1; $1cin >> TT;
-#ifdef ONPC
-  cout << "__________________________\n";
-#endif
   for (int i = 1; i <= TT; i++) {
+#ifdef ONPC
+    cout << "\033[32m" << "--------------------------" << "Case#" << i << "\033[0m" <<  '\n';
+#endif
     //cout << "Case #" << i << ": ";
     solve();
-#ifdef ONPC
-    cout << "__________________________\n";
-#endif
   }
 #ifdef ONPC
-  cerr << endl << "finished in " << clock() * 1.0 / CLOCKS_PER_SEC << " sec" << endl;
+  cout << "\033[1;32m" << "--------------------------" << "\033[0m" <<  '\n';
+  cerr << "finished in " << "\033[1;31m" << clock() * 1.0 / CLOCKS_PER_SEC << "\033[0m" << " sec" << endl;
 #endif
 }
