@@ -80,4 +80,15 @@ void debug_out(vector<string> args, int idx, int LINE_NUM, Head H, Tail... T) {
   debug_out(args, idx + 1, LINE_NUM, T...);
 }
 
-#define deb(...) debug_out(vec_splitter(#__VA_ARGS__), 0, __LINE__, __VA_ARGS__)
+void debug_(
+               vector<string> __attribute__ ((unused)) args,
+               __attribute__ ((unused)) int idx,
+               __attribute__ ((unused)) int LINE_NUM) { cerr << endl; }
+template <typename Head, typename... Tail>
+void debug_(vector<string> args, int idx, int LINE_NUM, Head H, Tail... T) {
+  cerr << "\033[2;36m";
+  debug_out(args, idx, LINE_NUM, H, T...);
+  cerr << "\033[0m";
+}
+
+#define deb(...) debug_(vec_splitter(#__VA_ARGS__), 0, __LINE__, __VA_ARGS__)
