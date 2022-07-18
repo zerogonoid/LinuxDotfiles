@@ -6,15 +6,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
- * Filename: `(file-name-nondirectory (buffer-file-name))`
- * Created:  `(format-time-string "%Y-%m-%d %H:%M:%S")`
- */
+/* Created:  `(format-time-string "%Y-%m-%d %H:%M:%S")` */
 
 #ifdef ONPC
 #include "debug.h"
 #else
 #define deb(...)
+#define out(...)
 #endif
 
 #define sz(a) ((int)((a).size()))
@@ -23,7 +21,7 @@ using namespace std;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 
 typedef long long ll;
-typedef long long ld;
+typedef long double ld;
 
 void solve() {
   $0
@@ -31,16 +29,11 @@ void solve() {
 
 int32_t main() {
   ios::sync_with_stdio(false); cin.tie(nullptr);
-  int TT = 1; $1cin >> TT;
-  for (int i = 1; i <= TT; i++) {
-#ifdef ONPC
-    cout << "\033[32m" << "--------------------------" << "Case#" << i << "\033[0m" <<  '\n';
-#endif
-    //cout << "Case #" << i << ": ";
+  int tt = 1; $1cin >> tt;
+  while (tt--) {
+    out(0);
+    //static int casecount(0); cout << "Case #" << ++casecount << ": ";
     solve();
   }
-#ifdef ONPC
-  cout << "\033[1;32m" << "--------------------------" << "\033[0m" <<  '\n';
-  cerr << "finished in " << "\033[1;31m" << clock() * 1.0 / CLOCKS_PER_SEC << "\033[0m" << " sec" << endl;
-#endif
+  out(1);
 }
